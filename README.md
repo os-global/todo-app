@@ -1,4 +1,4 @@
-# Space Gray Todo App
+# Todo App
 
 A lightweight, responsive Todo List app built with plain HTML, CSS, and JavaScript.
 
