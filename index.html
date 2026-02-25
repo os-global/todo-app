@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Gray Todo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" aria-labelledby="app-title">
+      <header class="app__header">
+        <h1 id="app-title">Todo List</h1>
+        <p>Space-gray edition</p>
+      </header>
+
+      <form id="todo-form" class="todo-form" autocomplete="off">
+        <label for="todo-input" class="sr-only">Add a new task</label>
+        <input
+          id="todo-input"
+          name="todo"
+          type="text"
+          maxlength="200"
+          placeholder="What needs to be done?"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <section class="controls" aria-label="Todo filters">
+        <div class="filters" role="tablist" aria-label="Filter todos">
+          <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="active" role="tab" aria-selected="false">Active</button>
+          <button class="filter-btn" data-filter="completed" role="tab" aria-selected="false">Completed</button>
+        </div>
+        <button id="clear-completed" class="ghost-btn" type="button">Clear completed</button>
+      </section>
+
+      <p id="todo-count" class="count" aria-live="polite">0 items left</p>
+
+      <ul id="todo-list" class="todo-list" aria-label="Todo items"></ul>
+    </main>
+
+    <template id="todo-item-template">
+      <li class="todo-item">
+        <label class="check-wrap">
+          <input type="checkbox" class="todo-toggle" />
+          <span class="checkmark" aria-hidden="true"></span>
+        </label>
+        <span class="todo-text" tabindex="0"></span>
+        <div class="todo-actions">
+          <button type="button" class="icon-btn edit-btn" aria-label="Edit todo">Edit</button>
+          <button type="button" class="icon-btn delete-btn" aria-label="Delete todo">Delete</button>
+        </div>
+      </li>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
