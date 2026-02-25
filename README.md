@@ -25,6 +25,31 @@ Space-gray dark palette:
 
 Just open `index.html` in a browser.
 
+## Tests
+
+This project uses **Vitest + jsdom** for DOM-based unit/integration tests.
+
+```bash
+npm install
+npm test
+```
+
+Watch mode:
+
+```bash
+npm run test:watch
+```
+
+Test coverage includes:
+
+- add todo
+- edit todo
+- toggle completed
+- delete todo
+- filters (All / Active / Completed)
+- clear completed
+- localStorage persistence on startup
+
 ## Deploy (GitHub Pages)
 
 This repository is configured for GitHub Pages from:
